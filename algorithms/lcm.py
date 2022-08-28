@@ -1,14 +1,14 @@
 """
-Euclidean approach to solve least common multiple
+Euclidean approach to solve the least common multiple
 """
 
-from classic.algorithms.gcd import EuclideanGDC as gdc
+from algorithms.gcd import EuclideanGDC as Gdc
 
 
 class EuclideanLCM:
     @staticmethod
     def execute(a: int, b: int) -> int:
-        return int((a * b) / gdc.execute(a, b))
+        return int((a * b) / Gdc.execute(a, b))
 
 
 if __name__ == '__main__':
