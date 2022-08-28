@@ -6,8 +6,8 @@ class ListNode(object):
     def print_list(self):
         curr = self
         while True:
-            print(curr.val)
-            print(" => ")
+            print(curr.val, end=' ')
+            print(" => ", end=' ')
             curr = curr.next
             if curr is None:
                 return
