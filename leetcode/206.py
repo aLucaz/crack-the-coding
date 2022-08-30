@@ -18,8 +18,10 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
+        if head is None:
+            return head
         loop = 1
-        new_head = None
+        new_head = head
         while head.next is not None:
             # go tail
             tail = head
