@@ -12,4 +12,4 @@ class EuclideanLCM:
 
 
 if __name__ == '__main__':
-    print(EuclideanLCM.execute(20, 9))
+    print(EuclideanLCM.execute(49, 21))
