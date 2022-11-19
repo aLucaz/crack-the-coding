@@ -1,5 +1,5 @@
 """
-Longest Subscring Without Repeating Character
+Longest Substring Without Repeating Character
 
 abcabcedbb -> abc -> 3
 {a} m=1
