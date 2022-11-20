@@ -31,6 +31,8 @@ On
 class Solution:
 
     def convert(self, input_str: str, n_rows: int) -> str:
+        if n_rows == 1:
+            return input_str
         levels = [""] * n_rows
         level = 0
         forward = True
@@ -54,3 +56,5 @@ if __name__ == '__main__':
     s = Solution()
     response = s.convert("PAYPALISHIRING", 3)
     print(response)
+    response2 = s.convert("ABC", 1)
+    print(response2)
