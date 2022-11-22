@@ -14,6 +14,9 @@ Output: [[""]]
 
 Input: strs = ["a"]
 Output: [["a"]]
+
+Complexity -> On
+Space -> Onxm
 """
 from typing import List
 
