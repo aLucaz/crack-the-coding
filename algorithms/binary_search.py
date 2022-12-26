@@ -13,7 +13,7 @@ class BinarySearch:
                 return start
             else:
                 return -1
-        center = int(end - start + 1 / 2)
+        center = start + ((end - start + 1) // 2)
         if sorted_list[center] == element:
             return center
         else:
@@ -25,6 +25,7 @@ class BinarySearch:
 
 
 if __name__ == '__main__':
-    my_list = [1, 4, 7, 11, 15]
+    my_list = [1, 4, 7, 11, 13, 15]
     my_list_size = len(my_list)
-    print(BinarySearch.execute(my_list, 15, 0, my_list_size - 1))
+    for i, v in enumerate(my_list):
+        print(BinarySearch.execute(my_list, v, 0, my_list_size - 1))
