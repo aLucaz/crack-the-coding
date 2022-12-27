@@ -8,11 +8,8 @@ O(logn)
 class BinarySearch:
     @staticmethod
     def execute(sorted_list, element, start, end):
-        if start == end:
-            if sorted_list[start] == element:
-                return start
-            else:
-                return -1
+        if start > end:
+            return -1
         center = start + ((end - start + 1) // 2)
         if sorted_list[center] == element:
             return center
