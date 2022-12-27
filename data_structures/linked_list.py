@@ -7,7 +7,8 @@ class ListNode(object):
         curr = self
         while True:
             print(curr.val, end=' ')
-            print(" => ", end=' ')
             curr = curr.next
             if curr is None:
-                return
+                break
+            print(" => ", end=' ')
+        print("\r")
