@@ -85,6 +85,7 @@ class Solution:
         nm = -1
         for n in ns:
             nm_aux = self.get_longest(n, m + 1, stones_c)
+            nm_aux = nm_aux if nm_aux > nm else nm
             nm = nm_aux if nm_aux > m else m
         return nm
 
@@ -100,23 +101,25 @@ class Solution:
 
 if __name__ == "__main__":
     s = Solution()
-    # r1 = s.removeStones([[0, 0], [0, 1], [1, 0], [1, 2], [2, 1], [2, 2]])  # 5
-    # print_matrix(r1)
-    # r2 = s.removeStones([[0, 0], [0, 2], [1, 1], [2, 0], [2, 2]])  # 3
-    # print_matrix(r2)
-    # r3 = s.removeStones([[0, 0]])  # 0
-    # print_matrix(r3)
-    # # custom
-    # r4 = s.removeStones([[0, 0], [0, 1], [1, 0], [1, 2]])  # 3
-    # print_matrix(r4)
-    # # failed tests
-    # r5 = s.removeStones([[0, 0], [0, 1], [1, 0], [1, 1], [2, 1], [2, 2], [3, 2], [3, 3], [3, 4], [4, 3], [4, 4]])  # 10
-    # print_matrix(r5)
-    # r6 = s.removeStones([[0, 1], [1, 2], [1, 3], [3, 3], [2, 3], [0, 2]])  # 5
-    # print_matrix(r6)
-    # r7 = s.removeStones([[0, 1], [1, 0]])  # 0
-    # print_matrix(r7)
-    # r8 = s.removeStones([[0, 1], [1, 1]])  # 1
-    # print_matrix(r8)
+    r1 = s.removeStones([[0, 0], [0, 1], [1, 0], [1, 2], [2, 1], [2, 2]])  # 5
+    print_matrix(r1)
+    r2 = s.removeStones([[0, 0], [0, 2], [1, 1], [2, 0], [2, 2]])  # 3
+    print_matrix(r2)
+    r3 = s.removeStones([[0, 0]])  # 0
+    print_matrix(r3)
+    # custom
+    r4 = s.removeStones([[0, 0], [0, 1], [1, 0], [1, 2]])  # 3
+    print_matrix(r4)
+    # failed tests
+    r5 = s.removeStones([[0, 0], [0, 1], [1, 0], [1, 1], [2, 1], [2, 2], [3, 2], [3, 3], [3, 4], [4, 3], [4, 4]])  # 10
+    print_matrix(r5)
+    r6 = s.removeStones([[0, 1], [1, 2], [1, 3], [3, 3], [2, 3], [0, 2]])  # 5
+    print_matrix(r6)
+    r7 = s.removeStones([[0, 1], [1, 0]])  # 0
+    print_matrix(r7)
+    r8 = s.removeStones([[0, 1], [1, 1]])  # 1
+    print_matrix(r8)
     r9 = s.removeStones([[3, 2], [0, 0], [3, 3], [2, 1], [2, 3], [2, 2], [0, 2]])  # 6
     print_matrix(r9)
+    r10 = s.removeStones([[3, 2], [3, 1], [4, 4], [1, 1], [0, 2], [4, 0]])  # 4 is wrong! 3 is the correct result
+    print_matrix(r10)
